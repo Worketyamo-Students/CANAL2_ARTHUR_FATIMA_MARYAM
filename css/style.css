@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 header{
     display: flex;
     justify-content: space-between;
@@ -5,6 +7,7 @@ header{
     padding: 10px 20px;
 
 }
+
 nav ul{
     display: flex;
     gap: 50px;
@@ -17,4 +20,60 @@ nav ul li:hover{
     color: #79AC78;
     border-bottom: solid;
     color: #79AC78;
+}
+.hero{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.hero_enfant2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.texte{
+    display: flex;
+    gap: 17px;
+}
+.texte.titre{
+    align-items: center;
+}
+.texte h4{
+    font-size: 20px;
+    font-family: ibm;
+}
+.texte p{
+    font-size: 14px;
+    font-family: open sans;
+}
+.boul{
+    width: 13px;
+    height: 50px;
+    background-color: #79AC78;
+    border-radius: 5px;
+}
+.texte1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 201px;
+}
+.img{
+    width: 740px;
+}
+.menu{
+    display: none;
+}
+@media (max-width: 900px) {
+    .bouton{
+        display: none;
+    }
+    nav ul li{
+    display: none;
+
+}
+.menu{
+    display: block;
+}
 }
