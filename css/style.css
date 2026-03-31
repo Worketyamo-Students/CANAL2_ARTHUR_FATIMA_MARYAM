@@ -1,10 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* initialisation */
+:root{
+    --pure-white: #FFFFFF;
+    --btn-green: #618264;
+    --pure-green: #79AC78;
+    --nav-text: #000E01;
+}
+
+/* header */
 header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    font-family: 'inter', sans-serif;
 
 }
 
@@ -14,59 +25,42 @@ nav ul{
     list-style: none;
 }
 nav ul li{
-    font-size: 2.4rem;
+    font-size: 2rem;
 }
-nav ul li:hover{
-    color: #79AC78;
-    border-bottom: solid;
-    color: #79AC78;
-}
-.hero{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-.hero_enfant2{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+a {
+    text-decoration: none;
 
 }
-.texte{
-    display: flex;
-    gap: 17px;
+
+nav a{
+    color: var(--nav-text);
 }
-.texte.titre{
-    align-items: center;
-}
-.texte h4{
-    font-size: 20px;
-    font-family: ibm;
-}
-.texte p{
-    font-size: 14px;
-    font-family: open sans;
-}
-.boul{
-    width: 13px;
-    height: 50px;
-    background-color: #79AC78;
-    border-radius: 5px;
-}
-.texte1{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 201px;
-}
-.img{
-    width: 740px;
+nav a:hover{
+    text-decoration: underline;
+    color: var(--pure-green);
+    
 }
 .menu{
-    display: none;
+    display: none ;
+    width: 30px;
+    cursor: pointer;
+ }
+.btn {
+    width: 190px;
+    height: 59px;
+    border-radius: 50px; 
+    text-align: center;
+    background-color: var(--btn-green);
+    color: var(--pure-white);
+    font-size: 20px;
+    font-weight: bold;
 }
-@media (max-width: 900px) {
-    .bouton{
+.btn:hover{
+    box-shadow: 5px 5px 1rem #000000a7;
+    transform: translateY(-5px);
+ }
+ @media (max-width: 900px) {
+    .btn{
         display: none;
     }
     nav ul li{
@@ -76,4 +70,126 @@ nav ul li:hover{
 .menu{
     display: block;
 }
+}
+
+ /* hero-section */
+
+.hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+ }
+ .im-hero {
+    /* border: solid red; */
+    width:700px;
+    height: 465px;
+    margin-left: 55px;
+    overflow: hidden;
+    border-radius: 20px;
+ }
+  .im-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .actualite {
+    flex: 1; 
+    padding: 7px;
+    max-width: 500px;
+  }
+
+  .bandeau{
+   display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'IBM Plex Sans Hebrew', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .bloc-actu{
+   display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    
+  }
+  .actu{
+    display: flex;      
+    align-items: flex-start;
+    gap: 15px;
+
+  }
+  .actu img {
+    width: 120px;       
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  .texte {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.texte h5 {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    color: #000;
+}
+
+.texte p {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.4;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+@media screen and (max-width: 853px) {
+
+    .hero {
+        flex-direction: column; 
+        align-items: center;
+        gap: 2rem;
+       
+
+    }
+
+    .im-hero {
+        width: 90%;     
+        height: auto;    
+        margin-left: 0;  
+        aspect-ratio: 16 / 9;
+    }
+
+    .actualite {
+        width: 100%;   
+        padding: 0 15px; 
+        /* margin-right: 170px; */
+    
+    }
+    .actu {
+        display: flex;
+        flex-direction: row; 
+        align-items: center;
+        gap: 10px;
+        padding-bottom: 1.5rem; 
+        border-bottom: 1px solid #e0e0e0;
+    }
+    .bloc-actu .actu:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .actu img {
+        width: 100px;
+        min-width: 100px;
+        height: 70px;
+    }
+
+    .btn {
+        display: none;
+    }
 }
