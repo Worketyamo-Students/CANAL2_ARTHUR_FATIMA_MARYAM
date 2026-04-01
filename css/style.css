@@ -7,6 +7,8 @@
     --btn-green: #618264;
     --pure-green: #79AC78;
     --nav-text: #000E01;
+    --fontInter:Inter,sans-serif;
+    --fontIbm:IBM Plex Sans Hebrew;
 }
 
 /* header */
@@ -59,7 +61,7 @@ nav a:hover{
     box-shadow: 5px 5px 1rem #000000a7;
     transform: translateY(-5px);
  }
- @media (max-width: 900px) {
+ @media (max-width: 853px) {
     .btn{
         display: none;
     }
@@ -193,3 +195,139 @@ nav a:hover{
         display: none;
     }
 }
+
+/*slide-section*/
+
+#slide{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-block: 13.4rem;
+}
+
+.slide-img img{
+    border-radius: 3.0rem;
+  
+}
+
+figcaption{
+    display: flex;
+    flex-direction: column;
+}
+
+strong{
+    width: 33.9rem;
+    height: 8.7rem;
+    color: var(--nav-text);
+    font-family: var(--fontIbm);
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 2.4rem;
+    line-height: 100%;
+    margin-top: 2.0rem;
+}
+
+small{
+    font-family: var(--fontInter);
+    font-weight: 300;
+    font-size: 1.3rem;
+    font-style: italic;
+    line-height: 100%;
+    color: var(--pure-green);
+    margin-top:1.4rem ;
+}
+
+@media screen and (max-width: 853px) {
+    #slide{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-block: 5.1rem;
+    margin-left: 2.3rem;
+    flex-wrap: nowrap;    /* 2. EMPECHE le retour à la ligne (obligatoire) */
+    overflow-x: scroll; 
+    
+}
+
+.slide-img img{
+    width: 25.4rem;
+    height: 21.1rem;
+    border-radius: 1.0rem; 
+    flex-shrink: 0;
+}
+
+strong{
+    width: 25.1rem;
+    height: 5.24rem;
+    color: var(--nav-text);
+    font-family: var(--fontIbm);
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 1.8rem;
+    line-height: 100%;
+    margin-top: 1.9rem;
+}
+
+small{
+    font-family: var(--fontInter);
+    font-weight: 300;
+    font-size: 1.0rem;
+    font-style: italic;
+    line-height: 100%;
+    color: var(--pure-green);
+    margin-top:1.4rem ;
+}
+
+}
+
+/*actualite*/
+
+#actualite{
+    display: flex;
+    flex-direction: column;
+    margin-left:16.6rem;
+}
+
+#actualite>img{
+    width:97.0rem ;
+    height: 63.3rem;
+    border-radius: 2.0rem;
+}
+
+.fig-cap{
+    font-family: var(--fontIbm);
+    font-weight: 600;
+    font-size: 3.8rem;
+    font-style: SemiBold;
+    line-height: 100%;
+    color: var(--nav-text);
+}
+
+@media screen and (max-width: 853px) {
+#actualite{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left:1.9rem;
+}
+
+#actualite>img{
+    width:70.7rem ;
+    height: 22.2rem;
+    margin-right: 2.0rem;
+    border-radius: -10px;
+}
+
+.fig-cap{
+    font-family: var(--fontIbm);
+    font-weight: 600;
+    font-size: 2.2em;
+    font-style: SemiBold;
+    line-height: 100%;
+    margin-left: 4.5rem;
+    margin-bottom: 2.0rem;
+    color: var(--nav-text);
+}
+
+}
+
