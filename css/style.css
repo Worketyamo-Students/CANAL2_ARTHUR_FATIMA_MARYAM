@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew:wght@100;200;300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 /* initialisation */
 :root{
     --pure-white: #FFFFFF;
     --btn-green: #618264;
     --pure-green: #79AC78;
     --nav-text: #000E01;
-    --fontInter:Inter,sans-serif;
-    --fontIbm:IBM Plex Sans Hebrew;
+    --fontInter:'Inter', sans-serif;
+    --fontIbm:'IBM Plex Sans Hebrew', sans-serif;
 }
 
 /* header */
@@ -282,58 +282,72 @@ small{
 
 /*actualite*/
 
-#actualite{
-    display: flex;
-    flex-direction: column;
-    margin-left:16.6rem;
+
+.box-actu {
+    margin-top: 50px;
+    padding: 0 5%;
 }
 
-#actualite>img{
-    width:97.0rem ;
-    height: 63.3rem;
-    border-radius: 2.0rem;
+.box-actu h1 {
+    font-family: 'IBM Plex Sans Hebrew', sans-serif;
+    font-size: clamp(20px, 4vw, 40px); 
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+.actu-image-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1120px;
+    aspect-ratio: 16 / 9; 
+    margin: 30px auto; 
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #000;
 }
 
-.fig-cap{
-    font-family: var(--fontIbm);
-    font-weight: 600;
-    font-size: 3.8rem;
-    font-style: SemiBold;
-    line-height: 100%;
-    color: var(--nav-text);
+.preview-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; 
+}
+
+.poster-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2; 
+    transition: opacity 0.5s ease;
+    display: block;
+}
+
+.actu-image-wrapper:hover .poster-image {
+    opacity: 0;
 }
 
 @media screen and (max-width: 853px) {
-#actualite{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left:1.9rem;
+    .box-actu {
+        padding: 0 20px;
+        text-align: center;
+    }
+    .box-actu h1 {
+        margin-left: 0; 
+    }
 }
 
-#actualite>img{
-    width:70.7rem ;
-    height: 22.2rem;
-    margin-right: 6.0rem;
-    border-radius: -10px;
-}
 
-.fig-cap{
-    font-family: var(--fontIbm);
-    font-weight: 600;
-    font-size: 2.2em;
-    font-style: SemiBold;
-    line-height: 100%;
-    margin-left: 4.5rem;
-    margin-bottom: 2.0rem;
-    color: var(--nav-text);
-}
-
-}
 
 /*canal matin*/
 
 #canal-matin{
+    padding: 0 15px;
     display:flex;
     margin-top: 2.0rem;
 }
@@ -606,6 +620,7 @@ aside > p{
 
 #comment > img{
     display: none;
+    font-family: 'IBM Plex Sans Hebrew', sans-serif;
 }
 
 h2{
@@ -647,6 +662,7 @@ aside > p{
 /*publicite*/
 
 #publicite{
+    margin-top: 1.0rem;
     display: flex;
     margin-left: 4.9rem;
 }
