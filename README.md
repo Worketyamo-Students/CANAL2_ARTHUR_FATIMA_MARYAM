@@ -52,8 +52,8 @@ code .
 ~~~
 ### Technologie Utilisees 
 - HTML
--CSS
+- CSS
 ### Contributeurs
--MAR'YAM
--FATIMA
--ARTHUR
+- MAR'YAM
+- FATIMA
+- ARTHUR
